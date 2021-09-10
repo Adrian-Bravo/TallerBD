@@ -35,3 +35,10 @@ def primo(num):
         perfecto = False
 
     return perfecto
+
+def f_exponencial(x):
+    suma = 0
+
+    for n in range(0, 50):
+        suma += math.pow(x, n) / math.factorial(n)
+    return suma  
