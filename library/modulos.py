@@ -19,3 +19,19 @@ def primo(num):
     else:
         primo = False
     return primo
+
+    def num_perfecto(num):
+    i = 1
+    suma = 0
+    while i < num:
+        if num%i == 0:
+            suma = suma + i
+
+        i += 1
+
+    if suma == num:
+        perfecto = True
+    else:
+        perfecto = False
+
+    return perfecto
