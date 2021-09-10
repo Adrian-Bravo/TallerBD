@@ -9,7 +9,6 @@ def principal():
     else: 
         print("Este numero es impar")
 
-
 if __name__ == "__main__":
       principal()
 
