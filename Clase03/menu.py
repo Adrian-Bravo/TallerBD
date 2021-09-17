@@ -45,3 +45,64 @@ class Empleado(Persona):
 
     def mostrarEmpleado(self):
         super().mostrarPersonas()
+        
+def menu():
+    p1 = Persona()
+    e1 = Empleado()
+    menu = 0
+    while menu != 7:
+
+        print("\nMENÚ")
+        print("1. Agregar Persona")
+        print("2. Eliminar Persona")
+        print("3. Mostrar Persona")
+        print("4. Agregar Empleado")
+        print("5. Eliminar Empleado")
+        print("6. Mostrar Empleado")
+        print("7. Salir")
+        menu = int(input("Ingrese opción => "))
+
+        if menu == 1:
+            continua = "s"
+            while continua == "s":
+                print("Agregar Persona")
+                p1.agregarPersonas()
+                continua = input("Desea continuar agregando s/n: ")
+                continua = continua.lower()
+        elif menu == 2:
+            continua = "s"
+            while continua == "s":
+                print("Eliminar Persona")
+                p1.eliminarPersonas()
+                continua = input("Desea continuar eliminando s/n: ")
+                continua = continua.lower()
+        elif menu == 3:
+            p1.mostrarPersonas()
+        elif menu == 4:
+            continua = "s"
+            while continua == "s":
+                print("Agregar Empleado")
+                e1.agregarEmpleado()
+                continua = input("Desea continuar agregando s/n: ")
+                continua = continua.lower()
+        elif menu == 5:
+            continua = "s"
+            while continua == "s":
+                print("Eliminar Empleado")
+                e1.eliminarEmpleado()
+                continua = input("Desea continuar eliminando s/n: ")
+                continua = continua.lower()
+        elif menu == 6:
+            e1.mostrarEmpleado()
+        elif menu == 7:
+            print("Finalizado")
+        else:
+            print("Esta opción no existe")
+
+
+def inicio():
+    menu()
+
+
+if __name__ == "__main__":
+    inicio()
